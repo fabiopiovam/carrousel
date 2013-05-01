@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+<title>jCarousel Simple Example</title>
+
+
+<!--
+  jQuery library
+-->
+<!-- <script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script> -->
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+
+<!--
+  jCarousel library
+-->
+<script type="text/javascript" src="js/jcarrousel/jquery.jcarousel.min.js"></script>
+<!--
+  jCarousel skin stylesheet
+-->
+<link rel="stylesheet" type="text/css" href="js/jcarrousel/tango/skin.css" />
+
+</head>
+<body>
+
+  <ul id="mycarousel" class="jcarousel-skin-tango">
+    <li>TESTE 1</li>
+    <li>TESTE 2</li>
+    <li>TESTE 3</li>
+    <li>TESTE 4</li>
+    <li>TESTE 5</li>
+    <li>TESTE 6</li>
+    <li>TESTE 7</li>
+    <li>TESTE 8</li>
+    <li>TESTE 9</li>
+    <li>TESTE 10</li>
+  </ul>
+
+  <script type="text/javascript">
+    function mycarousel_initCallback(carousel){
+      // Disable autoscrolling if the user clicks the prev or next button.
+      carousel.buttonNext.bind('click', function() {
+          carousel.startAuto(0);
+      });
+
+      carousel.buttonPrev.bind('click', function() {
+          carousel.startAuto(0);
+      });
+
+      // Pause autoscrolling if the user moves with the cursor over the clip.
+      carousel.clip.hover(function() {
+          carousel.stopAuto();
+      }, function() {
+          carousel.startAuto();
+      });
+    };
+
+    jQuery(document).ready(function() {
+        jQuery('#mycarousel').jcarousel({
+          auto: 2,
+          wrap: 'last',
+          initCallback: mycarousel_initCallback,
+        });
+    });
+  </script>
+
+</body>
+</html>
