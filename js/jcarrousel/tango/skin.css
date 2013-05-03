@@ -1,7 +1,12 @@
 /* container do jcarousel */
 .jcarousel-skin-tango .jcarousel-container {
-    background: #069;
-    border: 1px solid #346F97;
+    border: 1px solid #DADADA;
+    display: inline;
+    float: left;
+    height: 75px;
+    width: 832px;
+    margin: 0px 0 0px 0px;
+    padding: 0;
 }
 
 .jcarousel-skin-tango .jcarousel-direction-rtl {
@@ -10,7 +15,8 @@
 
 .jcarousel-skin-tango .jcarousel-container-horizontal {
     width: 960px;
-    height:200px;
+    height:130px;
+    padding:0;
 }
 
 .jcarousel-skin-tango .jcarousel-clip {
@@ -18,10 +24,10 @@
 }
 
 .jcarousel-skin-tango .jcarousel-clip-horizontal {
-    height: 120px;
+    height: 78px;
     left: 33px;
-    top: 40px;
-    width: 900px;
+    top: 25px;
+    width: 886px;
 }
 
 .jcarousel-skin-tango .jcarousel-item {
@@ -49,13 +55,13 @@
  */
  /* button next */
 .jcarousel-skin-tango .jcarousel-next-horizontal {
-    position: absolute;
-    top: 76px;
-    right: 5px;
-    width: 32px;
-    height: 32px;
+    background: url("next-horizontal.png") no-repeat scroll center top transparent;
     cursor: pointer;
-    background: transparent url(next-horizontal.png) no-repeat 0 0;
+    height: 19px;
+    position: absolute;
+    right: 15px;
+    top: 55px;
+    width: 12px;
 }
 
 .jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-next-horizontal {
@@ -66,11 +72,11 @@
 
 .jcarousel-skin-tango .jcarousel-next-horizontal:hover,
 .jcarousel-skin-tango .jcarousel-next-horizontal:focus {
-    background-position: -32px 0;
+    background-position: top right;
 }
 
 .jcarousel-skin-tango .jcarousel-next-horizontal:active {
-    background-position: -64px 0;
+    background-position: 0px 0;
 }
 
 .jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
@@ -78,7 +84,7 @@
 .jcarousel-skin-tango .jcarousel-next-disabled-horizontal:focus,
 .jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
     cursor: default;
-    background-position: -96px 0;
+    background-position: 0px 0;
 }
 
 /* buttom prev */
@@ -118,10 +124,10 @@
 
 /*  sobrescrevendo dentro do plugin   */
 #mycarousel li{
-    width:200px !important;
-    height:120px !important;
-    background:#f90;
+    background: none repeat scroll 0 0 #FF9900;
+    height: 77px !important;
     margin: 0 30px 0 0;
+    width: 153px !important;
 }
 
 
